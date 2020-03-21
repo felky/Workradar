@@ -6,7 +6,7 @@ class Config(object):
     # General
     TESTING = environ.get('TESTING')
     FLASK_DEBUG = environ.get('FLASK_DEBUG')
-    SECRET_KEY = environ.get('AWOOGAmrAWOOGAmr')
+    SECRET_KEY = environ.get('SECRET_KEY') or 'AwoogaliciousMisterIlligister'
 
     # Database
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
