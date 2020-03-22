@@ -14,9 +14,16 @@
             {{ form.password.label }}<br>
             {{ form.password(size=32) }}
         </p>
-        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p><p>{{ form.submit() }}</p>
+        <div class="d-flex flex row p-2">
+            <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+            <div style="width: 70px;"></div>
+            <p>{{ form.submit() }}</p>
+        </div>
 
     </form>
+
+    
+    <a href="/register">Don't have an account? Click here.</a>
 </div>
 
 {% endblock %}
