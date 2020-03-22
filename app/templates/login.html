@@ -2,28 +2,38 @@
 
 {% block content %}
 
-<div class="container">
-    <h1>Sign in</h1>
-    <form class="form-group" action="" method="POST" novalidate>
-        {{ form.hidden_tag() }}
-        <p>
-            {{ form.username.label }}<br>
-            {{ form.username(size=32) }}
-        </p>
-        <p>
-            {{ form.password.label }}<br>
-            {{ form.password(size=32) }}
-        </p>
-        <div class="d-flex flex row p-2">
-            <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-            <div style="width: 70px;"></div>
-            <p>{{ form.submit() }}</p>
-        </div>
+<div class="uk-position-center">
+        <h1>Login</h1>
+        
+        <form class="uk-form-horizontal" method="POST" novalidate>
+            <fieldset class="uk-fieldset">
+                {{ form.hidden_tag() }}
 
-    </form>
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <label class="uk-form-label">{{ form.username.label }}</label>
+                        {{ form.username(class_="uk-input uk-form-width-medium", size=32) }} 
+                    </div>
+                </div>
+                
+                <div class="uk-margin">
+                    <label class="uk-form-label">{{ form.password.label }}</label>
+                    {{ form.password(class_="uk-input uk-form-width-medium", size=32) }}
+                </div>
 
-    
-    <a href="/register">Don't have an account? Click here.</a>
+                <div class="uk-margin">
+                    {{ form.remember_me(class_="uk-radio") }}
+                    {{ form.remember_me.label }}
+                </div>
+
+                <div class="uk-margin">
+                    {{ form.submit(class_="uk-button uk-button-primary") }}
+                </div>
+
+            </fieldset>
+        </form>
+
+        <a href="/register">Don't have an account? Click here.</a>
 </div>
 
 {% endblock %}
