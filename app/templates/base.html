@@ -11,7 +11,7 @@
     </head>
     <body>
       <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-        <a href="/" class="uk-navbar-item uk-logo"><img src="{{ url_for('static', filename='logoextended.png') }}"></a>
+        <a href="/" class="uk-navbar-item uk-logo"><img src="{{ url_for('static', filename='logoextended.png') }}" style="height: 70px; width: auto; margin: 10px"></a>
         <div class="uk-navbar-right">
           <ul class="uk-navbar-nav">
             <li class="uk-navbar-item"><a href="/index">Home</a></li>
@@ -26,6 +26,8 @@
           </ul>
         </div>
       </nav>
-    {% block content %}{% endblock %}
+      <div class="uk-container">
+        {% block content %}{% endblock %}
+      </div>
     </body>
 </html>

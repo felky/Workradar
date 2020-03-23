@@ -2,25 +2,23 @@
 
 {% block content %}
 
-<div class="uk-position-center">
+<div class="uk-position-center" style="background-color: #dedede; padding: 40px; border-radius: 30px">
         <h1>Login</h1>
-        
+
         <form class="uk-form-horizontal" method="POST" novalidate>
             <fieldset class="uk-fieldset">
                 {{ form.hidden_tag() }}
 
                 <div class="uk-margin">
-                    <div class="uk-inline">
-                        <label class="uk-form-label">{{ form.username.label }}</label>
-                        {{ form.username(class_="uk-input uk-form-width-medium", size=32) }} 
-                    </div>
+                    {{ form.username.label }}
+                    {{ form.username(class_="uk-input", size=32) }}
                 </div>
                 
                 <div class="uk-margin">
-                    <label class="uk-form-label">{{ form.password.label }}</label>
-                    {{ form.password(class_="uk-input uk-form-width-medium", size=32) }}
+                    {{ form.password.label }}
+                    {{ form.password(class_="uk-input", size=32) }}
                 </div>
-
+                <hr>
                 <div class="uk-margin">
                     {{ form.remember_me(class_="uk-radio") }}
                     {{ form.remember_me.label }}
@@ -37,3 +35,4 @@
 </div>
 
 {% endblock %}
+
