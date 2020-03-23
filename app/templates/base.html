@@ -15,8 +15,8 @@
         <div class="uk-navbar-right">
           <ul class="uk-navbar-nav">
             <li class="uk-navbar-item"><a href="/index">Home</a></li>
-            <li class="uk-navbar-item"><a href="/404">About</a></li>
-            <li class="uk-navbar-item"><a href="/404">Contact</a></li>
+            <li class="uk-navbar-item"><a href="/about">About</a></li>
+            <li class="uk-navbar-item"><a href="/contact">Contact</a></li>
             {% if current_user.is_anonymous %}
             <li class="uk-navbar-item"><a href="{{ url_for('login') }}">Login</a></li>
             {% else %}
